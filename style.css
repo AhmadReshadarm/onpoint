@@ -356,6 +356,9 @@ input[type="range"]::-ms-track {
 
 /* --------------------------------- laptop touch ------------------------------ */
 @media only screen and (max-width: 1025px) {
+  .dot-wrapper {
+    gap: 50px;
+  }
   .hero-wrapper {
     gap: 50px;
   }
