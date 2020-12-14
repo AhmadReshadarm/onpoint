@@ -232,7 +232,6 @@ input[type="range"]:focus {
 input[type="range"]::-ms-track {
   width: 100%;
   cursor: pointer;
-
   background: transparent;
   border-color: transparent;
   color: transparent;
@@ -436,5 +435,9 @@ input[type="range"]::-ms-track {
 
   .card-wide {
     grid-column: span 2 / auto;
+  }
+
+  #slider {
+    width: 30%;
   }
 }

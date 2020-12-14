@@ -48,18 +48,23 @@ function dotHandler(classValue) {
 
 const slider = document.getElementById("slider");
 const slids = document.querySelector(".slider-x-wrapper");
-let touchSlider = false;
+
 slider.addEventListener("input", () => {
   slids.scrollTo(slider.value, 0);
 });
 
+slidsOffSet = slids.scrollLeft;
 slids.addEventListener("wheel", () => {
-  slidsOffSet = slids.scrollLeft;
   slider.value = slidsOffSet;
 });
 
 slids.addEventListener("touchmove", () => {
-  slidsOffSet = slids.scrollLeft;
-
   slider.value = slidsOffSet;
 });
+
+if (window.innerWidth < 1025) {
+  slider.max = 1500;
+  if (window.innerWidth < 450) {
+    slider.max = 500;
+  }
+}
