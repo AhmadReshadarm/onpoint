@@ -53,12 +53,13 @@ slider.addEventListener("input", () => {
   slids.scrollTo(slider.value, 0);
 });
 
-slidsOffSet = slids.scrollLeft;
 slids.addEventListener("wheel", () => {
+  slidsOffSet = slids.scrollLeft;
   slider.value = slidsOffSet;
 });
 
 slids.addEventListener("touchmove", () => {
+  slidsOffSet = slids.scrollLeft;
   slider.value = slidsOffSet;
 });
 
