@@ -65,13 +65,13 @@ window.addEventListener("change", () => {
   if (window.innerWidth < 1025) {
     slider.max = 1500;
     if (window.innerWidth < 450) {
-      slider.max = 700;
+      slider.max = 800;
     }
   }
 });
 if (window.innerWidth < 1025) {
   slider.max = 1500;
   if (window.innerWidth < 450) {
-    slider.max = 700;
+    slider.max = 800;
   }
 }
