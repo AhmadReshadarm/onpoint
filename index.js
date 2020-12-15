@@ -48,9 +48,10 @@ function dotHandler(classValue) {
 
 const slider = document.getElementById("slider");
 const slids = document.querySelector(".slider-x-wrapper");
-
+let touch = false;
 slider.addEventListener("input", () => {
   slids.scrollTo(slider.value, 0);
+  touch = false;
 });
 
 slids.addEventListener("wheel", () => {
@@ -59,13 +60,18 @@ slids.addEventListener("wheel", () => {
 });
 
 slids.addEventListener("touchmove", () => {
-  slidsOffSet = slids.scrollLeft;
-  slider.value = slidsOffSet;
+  touch = true;
+});
+
+slids.addEventListener("scroll", () => {
+  if (touch) {
+    slider.value = slids.scrollLeft;
+  }
 });
 
 if (window.innerWidth < 1025) {
-  slider.max = 1500;
+  slider.max = slids.scrollWidth;
   if (window.innerWidth < 450) {
-    slider.max = 900;
+    slider.max = slids.scrollWidth;
   }
 }
