@@ -75,3 +75,12 @@ if (window.innerWidth < 1025) {
     slider.max = slids.scrollWidth;
   }
 }
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 1025) {
+    slider.max = slids.scrollWidth - 500;
+    if (window.innerWidth < 450) {
+      slider.max = slids.scrollWidth;
+    }
+  }
+});
