@@ -61,14 +61,7 @@ slids.addEventListener("wheel", () => {
 slids.addEventListener("touchmove", () => {
   slider.value = slidsOffSet;
 });
-window.addEventListener("change", () => {
-  if (window.innerWidth < 1025) {
-    slider.max = 1500;
-    if (window.innerWidth < 450) {
-      slider.max = 900;
-    }
-  }
-});
+
 if (window.innerWidth < 1025) {
   slider.max = 1500;
   if (window.innerWidth < 450) {
